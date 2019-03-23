@@ -1,4 +1,9 @@
-# loom
+<h1>
+    <img src="https://user-images.githubusercontent.com/4007345/54870496-3a87c700-4d75-11e9-88f3-b836f36b6f91.png" width="25">
+    Loom
+</h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5efa9644-f537-4ef2-911b-4c6310ca2167/deploy-status)](https://app.netlify.com/sites/loom/deploys)
 
 _A pixel editor written in Vue.js_
 
