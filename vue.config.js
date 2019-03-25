@@ -1,5 +1,6 @@
 const path = require("path");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
+const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -23,7 +24,8 @@ module.exports = {
             sizes: [96, 128, 192, 256, 384, 512]
           }
         ]
-      })
+      }),
+      new FaviconsWebpackPlugin(path.resolve("src/assets/logo.png"))
     ]
   }
 };
