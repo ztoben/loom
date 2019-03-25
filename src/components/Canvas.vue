@@ -1,6 +1,9 @@
 <template>
   <div :style="cssProps" class="canvas">
-    <h1>Loom</h1>
+    <div class="header-container">
+      <img src="../assets/logo.png" width="25" alt="logo" />
+      <h1>Loom</h1>
+    </div>
     <div class="controls-container">
       <h2>Canvas</h2>
       <label>
@@ -54,7 +57,9 @@ export default {
   },
   methods: {
     createCanvas(size) {
-      return new Array(size * size).fill({ color: "white" });
+      return new Array(size * size).fill({
+        color: { r: 255, g: 255, b: 255, a: 1 }
+      });
     },
     newCanvas() {
       const canvas = this.createCanvas(this.size);
@@ -66,8 +71,9 @@ export default {
         this.$store.commit(UPDATE_CANVAS, { position });
     },
     getStyle(square) {
+      const { r, g, b, a } = square.color;
       return {
-        backgroundColor: square.color
+        backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})`
       };
     }
   }
@@ -90,6 +96,16 @@ export default {
   background-color: darkgray;
   flex: 1;
 
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
   .controls-container {
     width: $wrapperWidth;
     display: flex;
@@ -103,7 +119,7 @@ export default {
     grid-template-columns: repeat($noOfColumns, 1fr);
     grid-auto-rows: $rowHeight;
     grid-gap: $gutter;
-    background-color: black;
+    background-color: white;
     border: 1px solid black;
 
     & > div {

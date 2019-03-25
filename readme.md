@@ -12,10 +12,9 @@ View the live version [here](https://loom.netlify.com/).
 #### Todo
 - [ ] Different brush types
 - [ ] Saving images
-- [ ] Color picker
+- [X] Color picker
 - [ ] Hide tool bar behind menu on smaller screens
 - [ ] Use canvas for rendering the image
-- [ ] Fix favicon
 
 Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a>
 from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by

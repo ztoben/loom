@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    color: "white",
+    color: { r: 255, g: 0, b: 0, a: 1 },
     canvas: []
   },
   mutations: {
